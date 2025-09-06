@@ -1,0 +1,366 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'DM Sans', sans-serif;
+  background-color: rgb(196, 238, 165);
+
+}
+header{
+  padding: 50px 30px 30px ;
+}
+
+header h1{
+  color: rgb(7, 7, 7);
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+h3{
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(77, 126, 69);
+  padding-bottom: 20px;
+  text-align: center;
+  
+}
+
+h4{
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(77, 126, 69);
+  padding-bottom: 20px;
+  text-align: center;
+}
+a{
+  color: rgb(77, 126, 69);;
+  text-decoration: underline;
+  
+}
+.homepage-card{
+  display: block;;
+  padding: 20px;
+
+  
+  background-color: rgb(252, 251, 250);
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  border: rgb(100, 96, 96) 2px solid;
+}
+
+
+.profile{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;;
+}
+
+.profile-img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  border: rgb(100, 96, 96) 2px solid;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 9999px
+
+}
+
+.profile-info{
+  text-align: left;
+  padding: 20px;
+  flex: 1;
+}
+
+.profile-info h2{
+  font-size: 60px;
+  font-weight: 900;
+  color: rgb(7, 7, 7);
+  padding-bottom: 15px;
+
+}
+
+.profile-info p{
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(7, 7, 7);
+  line-height: 1.6;
+  padding-bottom: 30px;
+
+}
+
+.header-links{
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  padding-top: 10px;
+}
+.header-links .icon{
+  font-size: 50px;
+  color: gray;
+  transition: color 0.3s ease;}
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+}
+
+.button {
+  padding: 0.6em 1.4em;
+  font-family: inherit;
+  color: #070707;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 1000px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: transform 0.1s ease;
+}
+
+.button:not(.active):hover {
+  transform: translateY(-0.5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.button:active{
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  background-color: lightgray;
+  transform: translateY(2px);
+}
+
+.info-panel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px; 
+}
+
+.info-panel.active {
+  max-height: 1000px; 
+  overflow-y: auto;
+  opacity: 1;
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  background:  rgb(252, 252, 252);
+  border-top: 1px solid rgb(100, 96, 96);
+}
+
+.footer p {
+  margin-bottom: 10px;
+  color: rgb(50, 50, 50);
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 28px;
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: black;
+}
+
+.projects{
+  display: block;
+  width: 100%;
+  margin: auto;;
+}
+
+.project-card{
+  width: 90%;
+  margin: 1.5%;
+  padding: 10px;
+  background-color: rgb(251, 252, 250);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  border: rgb(100, 96, 96) 2px solid;
+}
+.project-img{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  border: rgb(100, 96, 96) 2px solid;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.project-content{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 15px;
+  flex: 1;
+}
+
+.about-intro{
+  padding: 15px;
+  margin-bottom: 20px;
+  border-bottom: rgb(100, 96, 96) 0.5px solid;
+}
+
+.about-facts{
+  padding: 0px 15px 15px 15px;;
+  padding-top: none;
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: rgb(100, 96, 96) 0.5px solid;
+}
+
+ul{
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.facts-intro{
+  margin-bottom: 10px;
+  color: rgb(77, 126, 69);
+  font-size: 20px;
+}
+.about-hobbies{
+  margin-bottom: 20px;
+}
+.highlight-me {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition over 0.3 seconds */
+}
+
+.highlight-me:hover {
+  background-color: rgb(196, 238, 165); /* Highlight on hover */
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;   /* stack image + text */
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 180px;             /* smaller image */
+    height: 180px;
+    margin: 0 auto 15px auto; /* center the image */
+  }
+
+  .profile-info {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .profile-info h2 {
+    font-size: 28px;          /* smaller heading */
+  }
+
+  .profile-info p {
+    font-size: 16px;          /* smaller paragraph */
+    padding-bottom: 15px;
+  }
+
+  .header-links {
+    justify-content: center;  /* center icons under text */
+  }
+
+  .header-links .icon {
+    font-size: 32px;          /* shrink icons */
+  }
+
+  .buttons {
+    flex-direction: column;   /* stack buttons vertically */
+    gap: 12px;
+  }
+
+  .button {
+    width: 100%;              /* full-width buttons */
+    font-size: 18px;
+  }
+
+  footer {
+    font-size: 14px;          /* smaller footer text */
+    padding: 12px 0;
+  }
+  /* Info panel */
+  .info-panel {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* Project cards */
+  .project-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Project content layout */
+  .project-content {
+    flex-direction: column; /* stack image above text */
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 0 15px 0;
+  }
+
+  /* About sections */
+  .about-intro,
+  .about-facts,
+  .about-hobbies {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center; /* easier to read on mobile */
+  }
+
+  ul {
+    margin-left: 10px;
+  }
+
+  .facts-intro {
+    font-size: 18px;
+  }
+
+  /* Contact section (assuming similar structure) */
+  .contact-section {
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
