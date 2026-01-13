@@ -19,8 +19,8 @@ function AboutMe() {
       </p>
       <p>
         <ul>
-          <li>Currently a Junior pursuing a Bsc in Computer Science.</li>
-          <li>Proficient in JavaScript, Python, and Java.</li>
+          <li>Currently a Senior pursuing a Bsc in Computer Science.</li>
+          <li>Proficient in JavaScript(React.js), Python, and Java.</li>
           <li>Experience with React, Node.js, and Flask for web development.</li>
           <li>Familiar with machine learning libraries like TensorFlow and scikit-learn.</li>
           <li>Starting to collaborate on open-source projects and contributing to the developer community.</li>
@@ -31,11 +31,14 @@ function AboutMe() {
       <p>
         In my free time, I love listening to music, drawing, and reading about recent
         tech trends or fiction novels. I am currently exploring machine learning and
-        focusing on understanding how algorithms like decision trees and neural networks work. I'm always excited to connect with like-minded individuals, so feel free to reach out! My email is in the contact section, and LinkedIn (the link is in the icon above) is a great way to connect professionally.
+        focusing on understanding how algorithms like decision trees and neural networks work. 
+        I'm always excited to connect with like-minded individuals, so feel free to reach out! 
+        My email is in the contact section, and LinkedIn (the link is in the icon above) is a great way to connect professionally.
       </p>
       </section>
     </div>
   );
 }
+
 
 export default AboutMe;
