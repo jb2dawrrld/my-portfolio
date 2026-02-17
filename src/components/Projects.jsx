@@ -4,10 +4,10 @@ function Projects() {
     <div className="projects">
       <h3>My Projects:</h3>
       <div className="project-card">
-        <h4>Movie Database App</h4>
+        <h4>Me-Good Health App</h4>
         <section className="project-content">
-          <img src='./moviedatabasescreenshot.png' alt="Project 1" className="project-img"/>
-          <p>A responsive movie web application built using React that integrates OMDb API to fetch and display real-time movie data. Was a great way to practice useState functions and API integration. You can read more about it <a href="https://github.com/jb2dawrrld/MovieDatabase"> here. </a></p>
+          <img src='./megooddashboard.png' alt="Project 1" className="project-img"/>
+          <p>A patient-facing wellness platform built using React and AWS serverless architecture, with real-time calorie balance tracking, daily steps and live heart rate monitoring. Exposed me to cloud-based authentification flows, distributed systems, and scalable data storage. You can read more about it <a href="https://github.com/jb2dawrrld/MeGood"> here. </a></p>
         </section>
       </div>
       <div className="project-card">

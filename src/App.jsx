@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './index.css'
-import cropped from './assets/cropped.jpg'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Projects from './components/Projects';
 import AboutMe from './components/AboutMe';
 import { motion } from "framer-motion";
+import headshot2 from './assets/headshot2.jpg'
 
 function App() {
   const [activeTab, setActiveTab] = useState(null);
@@ -66,7 +66,7 @@ function App() {
         <div className='homepage-card'>
           <div className='profile flex flex-col md:flex-row items-center md:items-start'>
             <section>
-              <img src={cropped} alt="Profile" className='profile-img w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto md:mx-0'/>
+              <img src={headshot2} alt="Profile" className='profile-img w-200 h-200 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full mx-auto md:mx-0'/>
             </section>
             <section className='profile-info mt-4 md:mt-0 md:ml-6 text-center md:text-left'>
               <h2 className='text-xl md:text-2xl font-bold'>Jabali Muriithi.</h2>
@@ -98,7 +98,7 @@ function App() {
 
       {/* Footer */}
       <footer className='footer mt-12 text-center py-6'>
-        <p>© Jabali Muriithi 2025</p>
+        <p>© Jabali Muriithi 2026</p>
       </footer>
     </div>
   )
