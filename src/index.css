@@ -137,7 +137,7 @@ a{
 
 .button:not(.active):hover {
   transform: translateY(-0.5px) scale(1.02);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .button:active{
