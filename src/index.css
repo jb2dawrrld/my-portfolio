@@ -131,12 +131,12 @@ a{
   font-size: 20px;
   font-weight: 1000px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   transition: transform 0.1s ease;
 }
 
 .button:not(.active):hover {
-  transform: translateY(-0.5px) scale(1.02);
+  transform: translateY(-0.2px) scale(1.02);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 

@@ -20,7 +20,7 @@ function AboutMe() {
       <p>
         <ul>
           <li>Currently a Senior pursuing a Bsc in Computer Science.</li>
-          <li>Proficient in JavaScript, Python, and Java.</li>
+          <li>Proficient in JavaScript, Python, C# and Java.</li>
           <li>Experience with React, Node.js, and Flask for web development.</li>
           <li>Familiar with machine learning libraries like TensorFlow and scikit-learn.</li>
           <li>Starting to collaborate on open-source projects and contributing to the developer community.</li>
