@@ -15,10 +15,16 @@ function App() {
       setActiveTab(newTabState);
       
       setTimeout(() => {
-        // Only scroll down if we're going from no tab to having a tab
+        // Only scroll down if opening a tab and the panel starts below the viewport.
         if (previousTabState === null && newTabState !== null) {
-          const scrollDistance = 200;
-          window.scrollBy({ top: scrollDistance, behavior: 'smooth' });
+          const infoPanel = document.querySelector(".info-panel");
+          if (infoPanel) {
+            const panelTop = infoPanel.getBoundingClientRect().top;
+            const viewportBuffer = 110;
+            if (panelTop > window.innerHeight - viewportBuffer) {
+              infoPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
         } 
         // Scroll back up only when closing a tab
         else if (newTabState === null) {
