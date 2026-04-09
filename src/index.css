@@ -24,10 +24,27 @@ body{
 .mainpage {
   min-height: 100vh;
   min-height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
   padding-left: env(safe-area-inset-left, 0px);
   padding-right: env(safe-area-inset-right, 0px);
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.particle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.68;
+}
+
+.mainpage-content {
+  position: relative;
+  z-index: 1;
 }
 header{
   padding: 50px 30px 30px ;
@@ -47,7 +64,7 @@ main {
 }
 h3{
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
   color: rgb(77, 126, 69);
   padding-bottom: 20px;
   text-align: center;
@@ -56,7 +73,7 @@ h3{
 
 h4{
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   color: rgb(77, 126, 69);
   padding-bottom: 20px;
   text-align: center;
@@ -220,32 +237,121 @@ a{
   justify-items: center;
 }
 
+.projects-grid {
+  width: 100%;
+  display: grid;
+  gap: 24px;
+}
+
 .project-card{
-  width: 90%;
-  margin: 1.5%;
-  padding: 10px;
-  background-color: rgb(251, 252, 250);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(251, 252, 250, 0.96);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  border: rgb(100, 96, 96) 2px solid;
-}
-.project-img{
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 15px;
-  margin-right: 20px;
-  border: rgb(100, 96, 96) 2px solid;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.project-content{
-  display: flex;
-  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.11);
   text-align: left;
-  padding: 15px;
-  flex: 1;
+  border: rgb(100, 96, 96) 2px solid;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.14);
+}
+
+.project-image-shell {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background: #ececec;
+}
+
+.project-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: min(420px, 70vh);
+  display: block;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  transform-origin: center;
+}
+
+.project-body {
+  padding: 18px 20px 20px;
+}
+
+.project-body h4 {
+  text-align: left;
+  padding-bottom: 12px;
+  line-height: 1.2;
+}
+
+.project-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-bottom: 14px;
+}
+
+.project-chip {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #e5e5e5;
+  background: #2d2d2d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.project-chip-link {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 28px;
+  box-sizing: border-box;
+  color: #2f2108;
+  background: linear-gradient(
+    165deg,
+    #fff6d8 0%,
+    #ffd38b 18%,
+    #e8a84a 52%,
+    #c97a28 88%,
+    #ffd38b 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.project-chip-link:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+.project-highlights {
+  margin: 0;
+  padding-left: 19px;
+}
+
+.project-highlights li {
+  margin-bottom: 8px;
+  line-height: 1.42;
 }
 
 .about-intro{
@@ -270,6 +376,7 @@ ul{
   margin-bottom: 10px;
   color: rgb(77, 126, 69);
   font-size: 20px;
+  font-weight: 700;
 }
 .about-hobbies{
   margin-bottom: 20px;
@@ -338,14 +445,8 @@ ul{
     gap: 24px;
   }
 
-  .project-img {
-    width: min(260px, 40vw);
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .project-card {
-    width: 95%;
+  .project-body {
+    padding: 16px 18px 18px;
   }
 
   .footer {
@@ -430,22 +531,32 @@ ul{
   .project-card {
     width: 100%;
     margin: 10px 0;
-    padding: 15px;
-    text-align: center;
-  }
-
-  /* Project content layout */
-  .project-content {
-    flex-direction: column; /* stack image above text */
-    align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   .project-img {
     width: 100%;
-    max-width: 300px;
+    max-width: none;
     height: auto;
-    margin: 0 0 15px 0;
+    margin: 0;
+  }
+
+  .project-body h4 {
+    text-align: left;
+  }
+
+  .project-chips {
+    gap: 6px 8px;
+  }
+
+  /* Shared chip scale on narrow viewports (tech tags + GitHub CTA) */
+  .project-chip {
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+
+  .project-chip-link {
+    margin-left: 0;
   }
 
   /* About sections */
@@ -502,11 +613,15 @@ ul{
   }
 
   .project-card {
-    padding: 12px;
+    margin: 8px 0;
   }
 
-  .project-content {
-    padding: 10px;
+  .project-body {
+    padding: 14px;
+  }
+
+  .project-highlights li {
+    margin-bottom: 7px;
   }
 
   .info-panel {
