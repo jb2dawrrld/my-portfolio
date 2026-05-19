@@ -1,10 +1,10 @@
-import React from "react";
 import { motion as Motion } from "framer-motion";
+import { assetUrl } from "../utils/assets";
 
 const projects = [
   {
     title: "Jabajournal",
-    image: "./journalss.png",
+    image: "journalss.png",
     alt: "Jabajournal screenshot",
     chips: ["React", "10+ Users", "Supabase", "Vercel", "Web App"],
     githubUrl: "https://github.com/jb2dawrrld/jabajournal",
@@ -12,12 +12,11 @@ const projects = [
       "Built and deployed a full-stack journaling web app with 10+ active users",
       "Designed and implemented secure multi-user data architecture using Supabase, leveraging Row-Level Security (RLS) and storage policies to enforce strict per-user data isolation.",
       "Engineered a system linking structured database records with cloud storage, supporting audio uploads, entry retrieval, and entry deletion.",
-    ]
+    ],
   },
-
   {
     title: "Shipcheck AI",
-    image: "./shipcheckss.png",
+    image: "shipcheckss.png",
     alt: "Shipcheck AI screenshot",
     chips: ["Cloudflare", "Wrangler", "AI", "Typescript", "LLM"],
     githubUrl: "https://github.com/jb2dawrrld/cf_ai_shipcheck-ai",
@@ -25,24 +24,23 @@ const projects = [
       "Built and deployed a Cloudflare-native AI deployment review agent using TypeScript, leveraging Workers, Durable Objects, and Workflows to analyze GitHub repositories for security, reliability, and ship-readiness risks",
       "Designed a deterministic ingestion pipeline that selects high-signal files from large repositories, enabling scalable analysis under token and API constraints while maintaining consistent results",
       "Implemented structured LLM outputs and a fix-plan generator that produces ordered, actionable remediation steps, with stateful chat for iterative debugging grounded in repository context",
-    ]
+    ],
   },
- 
   {
     title: "Get Out The Way! VR Game",
-    image: "./getouttheway.png",
+    image: "getouttheway.png",
     alt: "Get Out The Way VR game screenshot",
-    chips: ["VR", "Accessibility", "Educational", ],
-    githubUrl: "http://github.com/jb2dawrrld/ExperimentApp",
+    chips: ["VR", "Accessibility", "Educational"],
+    githubUrl: "https://github.com/jb2dawrrld/ExperimentApp",
     highlights: [
       "Co-led game mechanics for an assistive virtual environment prototype",
       "Integrated concepts using bone conduction for spatial audio cues",
       "Delivered as an upper-division, real-client sponsored project",
-    ]
+    ],
   },
   {
     title: "The Hidden Village Online",
-    image: "./hiddenvillage.png",
+    image: "hiddenvillage.png",
     alt: "The Hidden Village Online screenshot",
     chips: ["JavaScript", "Educational", "Web App", "MediaPipe"],
     githubUrl: "https://github.com/jb2dawrrld/MeGood",
@@ -50,7 +48,7 @@ const projects = [
       "Engineered a scalable MCQ assessment module from scratch",
       "Developed a real-time pose matching system using MediaPipe (sub-200ms inference latency)",
       "Optimized computer vision performance and improved frame rate by 24%",
-    ]
+    ],
   },
 ];
 
@@ -68,9 +66,11 @@ function Projects() {
           >
             <div className="project-image-shell">
               <Motion.img
-                src={project.image}
+                src={assetUrl(project.image)}
                 alt={project.alt}
                 className="project-img"
+                loading="lazy"
+                decoding="async"
                 whileHover={{ scale: 1.015 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
               />
@@ -95,8 +95,8 @@ function Projects() {
               </div>
 
               <ul className="project-highlights">
-                {project.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
+                {project.highlights.map((highlight, index) => (
+                  <li key={`${project.title}-${index}`}>{highlight}</li>
                 ))}
               </ul>
             </div>
