@@ -455,7 +455,8 @@ a{
   background: rgb(var(--bg-project-image));
 }
 
-.project-img{
+.project-img,
+.project-video {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -465,6 +466,10 @@ a{
   border: none;
   box-shadow: none;
   transform-origin: center;
+}
+
+.project-video {
+  object-fit: cover;
 }
 
 .project-body {
@@ -732,7 +737,8 @@ ul{
     text-align: left;
   }
 
-  .project-img {
+  .project-img,
+  .project-video {
     width: 100%;
     max-width: none;
     height: auto;
