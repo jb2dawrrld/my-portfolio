@@ -2,9 +2,7 @@ const STORAGE_KEY = "portfolio-theme";
 
 export function getStoredTheme() {
   const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "light" || stored === "dark") return stored;
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
-  return "light";
+  return stored === "dark" ? "dark" : "light";
 }
 
 export function applyTheme(theme) {
