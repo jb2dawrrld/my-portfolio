@@ -94,13 +94,8 @@ body{
   font-weight: 500;
 }
 
-.welcome-emoji {
-  display: inline-block;
-  transform-origin: center;
-  animation: welcome-wiggle 1.5s linear infinite;
-}
-
 .welcome-icon {
+  display: inline-block;
   width: 1.35em;
   height: 1.35em;
   vertical-align: -0.3em;
@@ -108,20 +103,25 @@ body{
   background-color: currentColor;
   -webkit-mask: var(--welcome-icon) center / contain no-repeat;
   mask: var(--welcome-icon) center / contain no-repeat;
+  transform-origin: 50% 85%;
+  animation: welcome-wiggle 3s ease-in-out infinite;
 }
 
 @keyframes welcome-wiggle {
-  0%, 100% {
+  0%, 30%, 100% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(20deg);
+  10% {
+    transform: rotate(6deg);
   }
-  50% {
-    transform: rotate(0deg);
+  20% {
+    transform: rotate(-6deg);
   }
-  75% {
-    transform: rotate(-20deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-icon {
+    animation: none;
   }
 }
 
@@ -129,12 +129,6 @@ body{
   text-align: center;
   color: rgb(var(--text-muted));
   padding: 12px 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .welcome-emoji {
-    animation: none;
-  }
 }
 
 .theme-toggle {

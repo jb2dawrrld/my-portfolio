@@ -44,6 +44,7 @@ const projects = [
     title: "MeGood - Health Dashboard",
 
     video: "meGoodDemo.mp4",
+    image: "meGoodStill.jpg",
 
     alt: "MeGood Demo Video",
 
@@ -70,6 +71,7 @@ const projects = [
     title: "Google Dino Game Clone(with Backend)",
 
     video: "dinoDemo.mp4",
+    image: "dinoStill.jpg",
 
     alt: "Google Dino Game Clone Demo Video",
 
@@ -92,6 +94,8 @@ const projects = [
 ];
 
 
+
+const canHover = window.matchMedia("(hover: hover)").matches;
 
 function ProjectMedia({ project }) {
   const videoRef = useRef(null);
@@ -117,7 +121,7 @@ function ProjectMedia({ project }) {
 
 
 
-  if (project.video) {
+  if (project.video && canHover) {
     return (
 
       <div

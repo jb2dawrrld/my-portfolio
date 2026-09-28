@@ -68,7 +68,7 @@ function App() {
           <h1>
             #opentowork
             <span
-              className="welcome-emoji welcome-icon"
+              className="welcome-icon"
               aria-hidden
               style={{
                 "--welcome-icon": `url(${assetUrl("3544081-200.png")})`,

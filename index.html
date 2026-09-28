@@ -6,16 +6,12 @@
     <meta name="theme-color" content="#c4eea5" />
     <script>
       (function () {
-        var stored = localStorage.getItem("portfolio-theme");
-        var theme = stored === "dark" || stored === "light"
-          ? stored
-          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        var theme = localStorage.getItem("portfolio-theme") === "dark" ? "dark" : "light";
         document.documentElement.setAttribute("data-theme", theme);
         var meta = document.querySelector('meta[name="theme-color"]');
         if (meta) meta.setAttribute("content", theme === "dark" ? "#121c16" : "#c4eea5");
       })();
     </script>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>" />
     <title>Jabali Muriithi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
