@@ -2,6 +2,7 @@ import { lazy, Suspense, useRef, useState } from "react";
 import "./index.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import AboutMe from "./components/AboutMe";
+import CopyEmail from "./components/CopyEmail";
 import ThemeToggle from "./components/ThemeToggle";
 import { assetUrl } from "./utils/assets";
 import { getStoredTheme, setStoredTheme } from "./utils/theme";
@@ -65,10 +66,14 @@ function App() {
       <div className="mainpage-content">
         <header className="site-header">
           <h1>
-            welcome!
-            <span className="welcome-emoji" aria-hidden>
-              💻
-            </span>
+            #opentowork
+            <span
+              className="welcome-emoji welcome-icon"
+              aria-hidden
+              style={{
+                "--welcome-icon": `url(${assetUrl("3544081-200.png")})`,
+              }}
+            />
           </h1>
         </header>
         <main>
@@ -144,8 +149,7 @@ function App() {
               {activeTab === "about" && <AboutMe />}
               {activeTab === "contact" && (
                 <p className="contact-copy">
-                  Email:{" "}
-                  <span className="highlight-me">jabali.muriithi@mnsu.edu</span>
+                  Email: <CopyEmail email="jabali.muriithi@mnsu.edu" />
                 </p>
               )}
             </div>
