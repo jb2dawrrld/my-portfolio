@@ -17,7 +17,6 @@
   --accent: 77, 126, 69;
   --border: 100, 96, 96;
   --shadow: 0, 0, 0;
-  --glimmer: 210, 245, 190;
 }
 
 [data-theme="dark"] {
@@ -38,7 +37,6 @@
   --accent: 140, 190, 128;
   --border: 70, 90, 75;
   --shadow: 0, 0, 0;
-  --glimmer: 200, 230, 190;
 }
 
 *{
@@ -261,7 +259,6 @@ a{
 
 .button {
   position: relative;
-  overflow: hidden;
   padding: 0.6em 1.4em;
   font-family: inherit;
   color: rgb(var(--text-button));
@@ -292,7 +289,7 @@ a{
 }
 
 .button--projects-hint {
-  animation: projects-bounce 1.05s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  animation: projects-bounce 2.0s cubic-bezier(0.1, 0.2, 0.3, 1) infinite;
   box-shadow:
     0 4px 14px rgba(var(--accent), 0.45),
     0 0 22px rgba(var(--bg-highlight), 0.55),
@@ -300,62 +297,15 @@ a{
   z-index: 1;
 }
 
-.button--projects-hint::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 6px;
-  background: linear-gradient(
-    115deg,
-    transparent 20%,
-    rgba(var(--glimmer), 0.6) 48%,
-    rgba(var(--accent), 0.75) 52%,
-    transparent 80%
-  );
-  animation: projects-glimmer 1.35s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.button--projects-hint::after {
-  content: "";
-  position: absolute;
-  inset: -80%;
-  background: linear-gradient(
-    100deg,
-    transparent 28%,
-    rgba(var(--glimmer), 0.9) 42%,
-    rgba(var(--accent), 1) 50%,
-    rgba(var(--bg-highlight), 0.95) 58%,
-    transparent 72%
-  );
-  animation: projects-glimmer 1.1s ease-in-out infinite;
-  pointer-events: none;
-  mix-blend-mode: soft-light;
-}
-
 @keyframes projects-bounce {
   0%, 100% {
     transform: translateY(0) scale(1);
   }
   30% {
-    transform: translateY(-11px) scale(1.04);
+    transform: translateY(-4px) scale(1.01);
   }
   55% {
-    transform: translateY(-5px) scale(1.02);
-  }
-}
-
-@keyframes projects-glimmer {
-  0% {
-    transform: translateX(-130%) rotate(14deg);
-    opacity: 0.35;
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(130%) rotate(14deg);
-    opacity: 0.35;
+    transform: translateY(-3px) scale(1.01);
   }
 }
 
@@ -366,11 +316,6 @@ a{
 @media (prefers-reduced-motion: reduce) {
   .button--projects-hint {
     animation: none;
-  }
-
-  .button--projects-hint::before,
-  .button--projects-hint::after {
-    display: none;
   }
 }
 
