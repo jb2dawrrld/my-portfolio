@@ -80,6 +80,44 @@ body{
   position: relative;
 }
 
+.construction {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.construction-card {
+  width: min(520px, 100%);
+  padding: 40px 28px;
+  background-color: rgb(var(--bg-card));
+  border: 2px solid rgb(var(--border));
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(var(--shadow), 0.1);
+  text-align: center;
+}
+
+.construction-card h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.construction-card p {
+  color: rgb(var(--text-secondary));
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.construction-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
 .site-header {
   padding: 50px 30px 30px;
   gap: 16px;
