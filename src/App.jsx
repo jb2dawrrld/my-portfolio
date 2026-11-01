@@ -4,9 +4,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import AboutMe from "./components/AboutMe";
 import CopyEmail from "./components/CopyEmail";
 import ThemeToggle from "./components/ThemeToggle";
+import UnderConstruction from "./components/UnderConstruction";
 import { assetUrl } from "./utils/assets";
 import { getStoredTheme, setStoredTheme } from "./utils/theme";
 
+const UNDER_CONSTRUCTION = true;
 const PROJECTS_HINT_KEY = "portfolio-projects-hint-seen";
 const Projects = lazy(() => import("./components/Projects"));
 
@@ -59,6 +61,10 @@ function App() {
       }
     });
   };
+
+  if (UNDER_CONSTRUCTION) {
+    return <UnderConstruction theme={theme} onToggle={toggleTheme} />;
+  }
 
   return (
     <div className="mainpage">
