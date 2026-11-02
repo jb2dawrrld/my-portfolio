@@ -8,7 +8,7 @@ import UnderConstruction from "./components/UnderConstruction";
 import { assetUrl } from "./utils/assets";
 import { getStoredTheme, setStoredTheme } from "./utils/theme";
 
-const UNDER_CONSTRUCTION = true;
+const UNDER_CONSTRUCTION = false;
 const PROJECTS_HINT_KEY = "portfolio-projects-hint-seen";
 const Projects = lazy(() => import("./components/Projects"));
 

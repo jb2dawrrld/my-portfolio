@@ -22,18 +22,18 @@ const projects = [
 
   {
 
-    title: "Shipcheck AI",
-    image: "shipcheckss.png",
-    alt: "Shipcheck AI screenshot",
-    chips: ["Cloudflare", "Wrangler", "AI", "Typescript", "LLM"],
-    githubUrl: "https://github.com/jb2dawrrld/cf_ai_shipcheck-ai",
+    title: "Zoink",
+    image: "zoink.png",
+    alt: "Zoink's screenshot",
+    chips: ["Web Scraping", "AR", "Mobile App", "Typescript", "Supabase"],
+    githubUrl: "https://github.com/jb2dawrrld/zoink",
     highlights: [
 
-      "Built and deployed a Cloudflare-native AI deployment review agent using TypeScript, leveraging Workers, Durable Objects, and Workflows to analyze GitHub repositories for security, reliability, and ship-readiness risks",
+      "Developed a full-stack augmented reality (AR) application that allows users to visualize furniture dimensions in real-world spaces before purchasing.",
 
-      "Designed a deterministic ingestion pipeline that selects high-signal files from large repositories, enabling scalable analysis under token and API constraints while maintaining consistent results",
+      "Engineered a multi-stage web scraping pipeline using retailer-specific adapters, HTML parsing, and Playwright to automatically extract product dimensions from listings onfurniture retailers like IKEA, Wayfair, and Amazon.",
 
-      "Implemented structured LLM outputs and a fix-plan generator that produces ordered, actionable remediation steps, with stateful chat for iterative debugging grounded in repository context",
+      "Integrated Supabase authentication, PostgreSQL, and cloud storage to support saved furniture assets, user wishlists, and shareable 3D models with cross-platform AR viewing (iOS and Android).",
 
     ],
 
