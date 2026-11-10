@@ -538,28 +538,79 @@ a{
   padding: 15px;
   margin-bottom: 20px;
   border-bottom: rgb(var(--border)) 0.5px solid;
+  text-align: left;
 }
 
-.about-facts{
-  padding: 0 15px 15px 15px;
+.about-education,
+.about-skills {
+  padding: 0 15px 20px 15px;
   text-align: left;
   margin-bottom: 20px;
   border-bottom: rgb(var(--border)) 0.5px solid;
 }
 
-ul{
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-.facts-intro{
-  margin-bottom: 10px;
+.about-section-label {
+  margin: 0 0 14px;
+  padding: 0;
   color: rgb(var(--accent));
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: left;
 }
+
+.education-entry {
+  padding-left: 16px;
+  border-left: 2px solid rgba(var(--border), 0.55);
+}
+
+.education-degree {
+  margin: 0;
+  color: rgb(var(--text-secondary));
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.education-school {
+  margin: 6px 0 0;
+  color: rgb(var(--text-secondary));
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.education-meta {
+  margin: 8px 0 0;
+  color: rgb(var(--text-muted));
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: left;
+  padding: 0.35em 0.85em;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(var(--text-button));
+  background-color: rgb(var(--bg-card));
+  border: 1px solid rgba(var(--border), 0.35);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(var(--shadow), 0.18);
+}
+
 .about-hobbies{
   margin-bottom: 20px;
+  text-align: left;
 }
 .highlight-me {
   background-color: transparent;
@@ -824,19 +875,33 @@ ul{
 
   /* About sections */
   .about-intro,
-  .about-facts,
+  .about-education,
+  .about-skills,
   .about-hobbies {
     padding: 10px;
     font-size: 14px;
-    text-align: center; /* easier to read on mobile */
   }
 
-  ul {
-    margin-left: 10px;
+  .about-intro,
+  .about-hobbies {
+    text-align: center;
   }
 
-  .facts-intro {
-    font-size: 18px;
+  .about-section-label {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .education-degree {
+    font-size: 15px;
+  }
+
+  .education-school {
+    font-size: 14px;
+  }
+
+  .skill-chip {
+    font-size: 12px;
   }
 
   .contact-copy {

@@ -1,31 +1,43 @@
+const languages = [
+  "Python",
+  "JavaScript",
+  "TypeScript",
+  "Java",
+  "SQL",
+  "C",
+  "Bash",
+  "HTML/CSS",
+];
+
 function AboutMe() {
   return (
     <>
       <h3>About Me:</h3>
       <section className="about-intro">
         <p>
-          I am Jabali Muriithi, a Computer Science student with a
-          passion for web development, machine learning, and exploring creative
-          ways to merge self-expression and technology. I enjoy tackling new challenges,
-          building projects that solve real problems, and learning new skills
-          along the way.
+          I'm a Computer Science student and part-time software engineer who enjoys building applications that solve real problems. My interests span full-stack development, machine learning, and finding creative ways to combine technology with self-expression.
+
         </p>
       </section>
-      <section className="about-facts">
-        <p className="facts-intro">Some quick facts about me:</p>
-        <ul>
-          <li>Currently a Senior pursuing a Bsc in Computer Science.</li>
-          <li>Proficient in JavaScript, Python, C# and Java.</li>
-          <li>2 apps currently live with real users, third one is in development.</li>
-          <li>Experienced with React, Node.js, and Flask for web development.</li>
-          <li>
-            Experienced with collaborative projects, client-facing work, and real deployment constraints
-          </li>
-          <li>
-            Starting to collaborate on open-source projects and contributing to
-            the developer community.
-          </li>
-        </ul>
+      <section className="about-education">
+        <h4 className="about-section-label">Education</h4>
+        <div className="education-entry">
+          <p className="education-degree">
+            Bachelor of Science in Computer Science, Minor in Mathematics
+          </p>
+          <p className="education-school">Minnesota State University - Mankato</p>
+          <p className="education-meta">(Expected December 2026) </p>
+        </div>
+      </section>
+      <section className="about-skills">
+        <h4 className="about-section-label">Skills</h4>
+        <div className="skill-chips">
+          {languages.map((language) => (
+            <span key={language} className="skill-chip">
+              {language}
+            </span>
+          ))}
+        </div>
       </section>
       <section className="about-hobbies">
         <p>
