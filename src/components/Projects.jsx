@@ -31,7 +31,7 @@ const projects = [
 
       "Developed a full-stack augmented reality (AR) application that allows users to visualize furniture dimensions in real-world spaces before purchasing.",
 
-      "Engineered a multi-stage web scraping pipeline using retailer-specific adapters, HTML parsing, and Playwright to automatically extract product dimensions from listings onfurniture retailers like IKEA, Wayfair, and Amazon.",
+      "Engineered a multi-stage web scraping pipeline using retailer-specific adapters, HTML parsing, and Playwright to automatically extract product dimensions from listings on furniture retailers like IKEA, Wayfair, and Amazon.",
 
       "Integrated Supabase authentication, PostgreSQL, and cloud storage to support saved furniture assets, user wishlists, and shareable 3D models with cross-platform AR viewing (iOS and Android).",
 
