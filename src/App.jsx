@@ -98,7 +98,11 @@ function App() {
               </section>
               <section className="profile-info">
                 <h2>Jabali Muriithi.</h2>
-                <p>Creating, learning, and falling in love with the process.</p>
+                <p>
+                  Part-time Software Engineer | Honors CS Senior 
+                  <br />
+                  <i>Creating, learning, and falling in love with the process.</i>
+                </p>
                 <div className="header-links">
                   <a
                     href="https://github.com/jb2dawrrld"
